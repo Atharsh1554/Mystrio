@@ -1,0 +1,137 @@
+import React from 'react';
+import { Globe, Mail, Share2, MessageSquare } from 'lucide-react';
+
+export const Footer = () => {
+  return (
+    <footer 
+      style={{ 
+        backgroundColor: '#0B0E17', 
+        borderTop: '1px solid rgba(255, 255, 255, 0.08)', 
+        paddingTop: '5rem',
+        paddingBottom: '3rem',
+        color: '#94A3B8',
+        position: 'relative',
+        zIndex: 2
+      }}
+    >
+      <div className="container">
+        {/* Top 4-Column Layout */}
+        <div className="grid-4" style={{ gap: '3rem', marginBottom: '4rem' }}>
+          
+          {/* Column 1: Brand Info */}
+          <div>
+            <a href="#" style={{ display: 'inline-block', marginBottom: '1.25rem' }}>
+              <div 
+                style={{ 
+                  backgroundColor: '#FFFFFF', 
+                  padding: '0.45rem 1.1rem', 
+                  borderRadius: '100px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.2)'
+                }}
+              >
+                <div 
+                  style={{
+                    width: '22px',
+                    height: '22px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #FF5722 0%, #FF7A00 100%)',
+                    color: '#FFFFFF',
+                    fontWeight: 800,
+                    fontSize: '0.85rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontFamily: 'Space Grotesk, sans-serif'
+                  }}
+                >
+                  M
+                </div>
+                <span style={{ color: '#0B0E17', fontWeight: 800, fontSize: '1.2rem', fontFamily: 'Space Grotesk, sans-serif', letterSpacing: '-0.02em' }}>
+                  ystrio
+                </span>
+              </div>
+            </a>
+
+            <p style={{ fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.5rem', color: '#94A3B8' }}>
+              Mystrio is a tech startup crafting innovative digital platforms that simplify everyday life — from grooming and commercial ecosystems to food sharing and digital entertainment.
+            </p>
+
+            <div style={{ display: 'flex', gap: '0.8rem' }}>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF', transition: 'all 0.2s ease' }}>
+                <Globe size={18} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF', transition: 'all 0.2s ease' }}>
+                <Share2 size={18} />
+              </a>
+              <a href="mailto:contact@mystrio.com" style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF', transition: 'all 0.2s ease' }}>
+                <Mail size={18} />
+              </a>
+            </div>
+          </div>
+
+
+          {/* Column 2: Our Products */}
+          <div>
+            <h4 style={{ color: '#FFFFFF', fontSize: '0.85rem', fontWeight: 800, marginBottom: '1.25rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+              OUR PRODUCTS
+            </h4>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.9rem' }}>
+              <li><a href="#products" style={{ color: '#94A3B8', transition: 'color 0.2s' }}>Groomer (AI Booking)</a></li>
+              <li><a href="#products" style={{ color: '#94A3B8', transition: 'color 0.2s' }}>Broker Hub (Digital Platform)</a></li>
+              <li><a href="#products" style={{ color: '#94A3B8', transition: 'color 0.2s' }}>Foodshare (Food Waste)</a></li>
+              <li><a href="#products" style={{ color: '#94A3B8', transition: 'color 0.2s' }}>Remix (Digital Streaming)</a></li>
+            </ul>
+          </div>
+
+          {/* Column 3: Company */}
+          <div>
+            <h4 style={{ color: '#FFFFFF', fontSize: '0.85rem', fontWeight: 800, marginBottom: '1.25rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+              COMPANY
+            </h4>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.9rem' }}>
+              <li><a href="#mission" style={{ color: '#94A3B8' }}>About Us</a></li>
+              <li><a href="#founders" style={{ color: '#94A3B8' }}>Founding Team</a></li>
+              <li><a href="#founders" style={{ color: '#94A3B8' }}>Careers & Roles</a></li>
+              <li><a href="#contact" style={{ color: '#94A3B8' }}>Contact & Inquiry</a></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Legal & Notice */}
+          <div>
+            <h4 style={{ color: '#FFFFFF', fontSize: '0.85rem', fontWeight: 800, marginBottom: '1.25rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+              LEGAL & NOTICE
+            </h4>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.9rem' }}>
+              <li><span style={{ color: '#64748B', cursor: 'pointer' }}>Privacy Policy</span></li>
+              <li><span style={{ color: '#64748B', cursor: 'pointer' }}>Terms of Service</span></li>
+              <li><span style={{ color: '#64748B', cursor: 'pointer' }}>Cookie Settings</span></li>
+              <li><span style={{ color: '#64748B', cursor: 'pointer' }}>Trademark Guidelines</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Bottom Bar */}
+        <div 
+          style={{ 
+            borderTop: '1px solid rgba(255, 255, 255, 0.08)', 
+            paddingTop: '2rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '1rem',
+            fontSize: '0.85rem',
+            color: '#64748B'
+          }}
+        >
+          <p>© {new Date().getFullYear()} Mystrio. All rights reserved. Founded by Atharsh S, Ajay KS, and Akash P.</p>
+          <p>Engineered with absolute simplicity</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
