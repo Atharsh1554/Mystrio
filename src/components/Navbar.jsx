@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import logoFull from '../assets/logo_full.png';
 
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,40 +22,18 @@ export const Navbar = () => {
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px' }}>
         
-        {/* Brand Logo matching Figma */}
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <div 
+        {/* Brand Logo */}
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <img 
+            src={logoFull} 
+            alt="Mystrio" 
             style={{ 
-              backgroundColor: '#FFFFFF', 
-              padding: '0.45rem 1.1rem', 
-              borderRadius: '100px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.4rem',
-              boxShadow: '0 4px 14px rgba(0,0,0,0.2)'
-            }}
-          >
-            <div 
-              style={{
-                width: '22px',
-                height: '22px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #FF5722 0%, #FF7A00 100%)',
-                color: '#FFFFFF',
-                fontWeight: 800,
-                fontSize: '0.85rem',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontFamily: 'Space Grotesk, sans-serif'
-              }}
-            >
-              M
-            </div>
-            <span style={{ color: '#0B0E17', fontWeight: 800, fontSize: '1.25rem', fontFamily: 'Space Grotesk, sans-serif', letterSpacing: '-0.02em' }}>
-              ystrio
-            </span>
-          </div>
+              height: '42px', 
+              width: 'auto', 
+              display: 'block',
+              filter: 'drop-shadow(0 2px 14px rgba(0, 195, 255, 0.2))'
+            }} 
+          />
         </Link>
 
         {/* Center Nav Links */}

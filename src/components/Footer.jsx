@@ -1,5 +1,7 @@
 import React from 'react';
 import { Globe, Mail, Share2, MessageSquare } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import logoFull from '../assets/logo_full.png';
 
 export const Footer = () => {
   return (
@@ -20,40 +22,18 @@ export const Footer = () => {
           
           {/* Column 1: Brand Info */}
           <div>
-            <a href="#" style={{ display: 'inline-block', marginBottom: '1.25rem' }}>
-              <div 
+            <Link to="/" style={{ display: 'inline-block', marginBottom: '1.25rem', textDecoration: 'none' }}>
+              <img 
+                src={logoFull} 
+                alt="Mystrio" 
                 style={{ 
-                  backgroundColor: '#FFFFFF', 
-                  padding: '0.45rem 1.1rem', 
-                  borderRadius: '100px',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.4rem',
-                  boxShadow: '0 4px 14px rgba(0,0,0,0.2)'
-                }}
-              >
-                <div 
-                  style={{
-                    width: '22px',
-                    height: '22px',
-                    borderRadius: '50%',
-                    background: 'linear-gradient(135deg, #FF5722 0%, #FF7A00 100%)',
-                    color: '#FFFFFF',
-                    fontWeight: 800,
-                    fontSize: '0.85rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontFamily: 'Space Grotesk, sans-serif'
-                  }}
-                >
-                  M
-                </div>
-                <span style={{ color: '#0B0E17', fontWeight: 800, fontSize: '1.2rem', fontFamily: 'Space Grotesk, sans-serif', letterSpacing: '-0.02em' }}>
-                  ystrio
-                </span>
-              </div>
-            </a>
+                  height: '42px', 
+                  width: 'auto', 
+                  display: 'block',
+                  filter: 'drop-shadow(0 2px 14px rgba(0, 195, 255, 0.2))'
+                }} 
+              />
+            </Link>
 
             <p style={{ fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.5rem', color: '#94A3B8' }}>
               Mystrio is a tech startup crafting innovative digital platforms that simplify everyday life — from grooming and commercial ecosystems to food sharing and digital entertainment.

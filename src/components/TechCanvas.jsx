@@ -37,30 +37,30 @@ export const TechCanvas = () => {
     const render = () => {
       ctx.clearRect(0, 0, width, height);
 
-      // Ambient radial spots matching orange logo glow
+      // Ambient radial spots matching brand neon cyan & purple-pink glow
       const g1 = ctx.createRadialGradient(
-        width * 0.2,
+        width * 0.15,
         height * 0.15,
         20,
-        width * 0.2,
+        width * 0.15,
         height * 0.15,
         width * 0.45
       );
-      g1.addColorStop(0, 'rgba(255, 87, 34, 0.08)');
+      g1.addColorStop(0, 'rgba(0, 195, 255, 0.09)');
       g1.addColorStop(1, 'rgba(11, 14, 23, 0)');
 
       ctx.fillStyle = g1;
       ctx.fillRect(0, 0, width, height);
 
       const g2 = ctx.createRadialGradient(
-        width * 0.8,
-        height * 0.3,
+        width * 0.85,
+        height * 0.35,
         20,
-        width * 0.8,
-        height * 0.3,
+        width * 0.85,
+        height * 0.35,
         width * 0.45
       );
-      g2.addColorStop(0, 'rgba(255, 122, 0, 0.06)');
+      g2.addColorStop(0, 'rgba(217, 70, 239, 0.08)');
       g2.addColorStop(1, 'rgba(11, 14, 23, 0)');
 
       ctx.fillStyle = g2;
@@ -77,7 +77,7 @@ export const TechCanvas = () => {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 87, 34, ${p.alpha * 0.6})`;
+        ctx.fillStyle = i % 2 === 0 ? `rgba(0, 195, 255, ${p.alpha * 0.6})` : `rgba(217, 70, 239, ${p.alpha * 0.6})`;
         ctx.fill();
 
         for (let j = i + 1; j < particles.length; j++) {
@@ -91,7 +91,7 @@ export const TechCanvas = () => {
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
             const lineAlpha = (1 - dist / 130) * 0.15;
-            ctx.strokeStyle = `rgba(255, 87, 34, ${lineAlpha})`;
+            ctx.strokeStyle = i % 2 === 0 ? `rgba(0, 195, 255, ${lineAlpha})` : `rgba(217, 70, 239, ${lineAlpha})`;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }
