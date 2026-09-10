@@ -12,6 +12,7 @@ import { ProductRemix } from './pages/ProductRemix';
 import { Careers } from './pages/Careers';
 import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
+import { IntroSplash } from './components/IntroSplash';
 
 // Scroll to top helper on route navigation
 const ScrollToTop = () => {
@@ -26,6 +27,7 @@ export function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <IntroSplash />
 
       {/* Subtle background gradient orbs */}
       <div className="bg-orb bg-orb-1" />
