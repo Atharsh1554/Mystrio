@@ -70,7 +70,7 @@ export const ProductDetailView = ({ product }) => {
                     className="btn btn-coral"
                     style={{ padding: '0.45rem 1.15rem', fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
                   >
-                    <span>Launch App</span>
+                    <span>Launch Live App</span>
                     <ExternalLink size={14} />
                   </a>
                 )}
