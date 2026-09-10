@@ -36,6 +36,7 @@ export const Home = () => {
       category: 'AI Grooming & Booking',
       status: 'LIVE',
       image: groomerImg,
+      liveUrl: 'https://groomer-app-steel.vercel.app/',
       description: 'AI-powered grooming & booking platform. Smart scheduling, personalized styling recommendations, and seamless calendar integrations.',
       fullDescription: 'Groomer revolutionizes personal care booking by pairing advanced computer vision style recommendations with an automated scheduling calendar engine for salons, barbers, and clients worldwide.',
       features: ['AI Barber & Style Recommendations', 'Automated Real-time Calendar Sync', 'Instant Contactless Payments', 'Loyalty Rewards Engine']
@@ -44,8 +45,9 @@ export const Home = () => {
       id: 'broker-hub',
       title: 'BROKER HUB',
       category: 'Digital Commercial Platform',
-      status: 'IN DEVELOPMENT',
+      status: 'LIVE',
       image: brokerhubImg,
+      liveUrl: 'https://new-brokerhub.vercel.app/',
       description: 'Digital broker platform connecting buyers and sellers with end-to-end transparency, real-time contract tracking, and automated efficiency.',
       fullDescription: 'Broker Hub eliminates friction in high-value commercial transactions by providing a unified digital portal equipped with smart contract tracking, automated compliance validation, and buyer-seller messaging.',
       features: ['Automated Contract Auditing', 'Real-time Escrow & Pipeline Analytics', 'Smart Document Verification', 'Role-based Access Controls']
@@ -56,6 +58,7 @@ export const Home = () => {
       category: 'Community Waste Reduction',
       status: 'LIVE',
       image: foodshareImg,
+      liveUrl: 'https://food-donation-app-ten.vercel.app/',
       description: 'Reducing global food waste through peer-to-peer community sharing. Share surplus meals, connect with local networks, and support sustainability.',
       fullDescription: 'FoodShare provides a hyper-local peer-to-peer sharing ecosystem where individuals, farms, and local businesses distribute surplus edible food items directly to nearby community networks.',
       features: ['Hyper-local Proximity Mapping', 'Zero-waste Sustainability Score', 'Community Distribution Points', 'Instant Share Alerts']
@@ -64,8 +67,9 @@ export const Home = () => {
       id: 'remix',
       title: 'REMIX',
       category: 'Next-Gen Streaming Hub',
-      status: 'LIVE',
+      status: 'IN DEVELOPMENT',
       image: remixImg,
+      liveUrl: null,
       description: 'Next-gen immersive streaming platform for digital entertainment and interactive content creation. Stream, discover, and build community in real-time.',
       fullDescription: 'Remix merges high-definition video streaming with spatial audio visualizers, interactive chat overlays, and real-time creator monetization tools for next-generation digital entertainment.',
       features: ['Spatial Audio & Visualizers', 'Ultra-low Latency Interactive Chat', 'Multi-channel Stream Splitting', 'Creator Economy Monetization']
@@ -190,7 +194,46 @@ export const Home = () => {
                     {item.description}
                   </p>
 
-                  <div>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', marginTop: 'auto' }}>
+                    {item.liveUrl ? (
+                      <a 
+                        href={item.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ 
+                          display: 'inline-flex', 
+                          alignItems: 'center', 
+                          gap: '0.45rem', 
+                          color: '#FF5722', 
+                          fontWeight: 700, 
+                          fontSize: '0.95rem',
+                          textDecoration: 'none'
+                        }}
+                      >
+                        <span>Launch Platform</span>
+                        <ArrowUpRight size={16} />
+                      </a>
+                    ) : (
+                      <button 
+                        onClick={() => setSelectedProduct(item)}
+                        style={{ 
+                          background: 'transparent',
+                          border: 'none',
+                          padding: 0,
+                          cursor: 'pointer',
+                          display: 'inline-flex', 
+                          alignItems: 'center', 
+                          gap: '0.45rem', 
+                          color: '#94A3B8', 
+                          fontWeight: 700, 
+                          fontSize: '0.95rem' 
+                        }}
+                      >
+                        <span>View Preview</span>
+                        <ArrowRight size={16} />
+                      </button>
+                    )}
+
                     <button 
                       onClick={() => setSelectedProduct(item)}
                       style={{ 
@@ -200,14 +243,14 @@ export const Home = () => {
                         cursor: 'pointer',
                         display: 'inline-flex', 
                         alignItems: 'center', 
-                        gap: '0.5rem', 
-                        color: '#FF5722', 
-                        fontWeight: 700, 
-                        fontSize: '0.95rem' 
+                        gap: '0.35rem', 
+                        color: 'var(--text-muted-dark)', 
+                        fontWeight: 600, 
+                        fontSize: '0.875rem' 
                       }}
                     >
-                      <span>Launch Platform</span>
-                      <ArrowRight size={16} />
+                      <span>Details</span>
+                      <ChevronRight size={14} />
                     </button>
                   </div>
                 </div>

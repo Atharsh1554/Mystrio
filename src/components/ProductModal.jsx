@@ -105,20 +105,32 @@ export const ProductModal = ({ product, onClose }) => {
           </div>
 
           {/* Footer CTAs */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', pt: '1rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '1.25rem', borderTop: '1px solid rgba(255,255,255,0.08)', flexWrap: 'wrap', gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#64748B', fontSize: '0.85rem' }}>
               <ShieldCheck size={16} />
               <span>Verified Mystrio Ecosystem</span>
             </div>
             
-            <button 
-              onClick={() => alert(`Launching ${product.title} platform portal...`)} 
-              className="btn btn-orange"
-              style={{ padding: '0.75rem 1.5rem', fontSize: '0.9rem' }}
-            >
-              <span>Launch Platform</span>
-              <ExternalLink size={16} />
-            </button>
+            {product.liveUrl ? (
+              <a 
+                href={product.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-orange"
+                style={{ padding: '0.75rem 1.5rem', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}
+              >
+                <span>Launch Live App</span>
+                <ExternalLink size={16} />
+              </a>
+            ) : (
+              <button 
+                disabled
+                className="btn"
+                style={{ padding: '0.75rem 1.5rem', fontSize: '0.9rem', background: 'rgba(255,255,255,0.08)', color: '#94A3B8', cursor: 'not-allowed' }}
+              >
+                <span>In Development</span>
+              </button>
+            )}
           </div>
         </div>
       </div>

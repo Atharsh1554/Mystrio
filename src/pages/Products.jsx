@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { PRODUCT_LIST } from '../data/productsData';
-import { ArrowRight, Zap } from 'lucide-react';
+import { ArrowRight, Zap, ExternalLink } from 'lucide-react';
 
 export const Products = () => {
   return (
@@ -39,7 +39,7 @@ export const Products = () => {
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
                     <h2 style={{ fontSize: '1.65rem', fontWeight: 800, color: '#FFFFFF' }}>{prod.name}</h2>
                     <span className={`badge-status ${prod.status.toLowerCase().includes('prototype') || prod.status.toLowerCase().includes('live') ? 'live' : 'dev'}`}>
-                      {prod.status.toLowerCase().includes('prototype') ? 'LIVE' : 'IN DEVELOPMENT'}
+                      {prod.status.toLowerCase().includes('live') || prod.status.toLowerCase().includes('prototype') ? 'LIVE' : 'IN DEVELOPMENT'}
                     </span>
                   </div>
 
@@ -68,10 +68,39 @@ export const Products = () => {
                     ))}
                   </div>
 
-                  <Link to={prod.path} className="btn btn-coral" style={{ width: '100%' }}>
-                    <span>Launch Platform ({prod.name})</span>
-                    <ArrowRight size={16} />
-                  </Link>
+                  <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: 'auto' }}>
+                    {prod.liveUrl ? (
+                      <>
+                        <a 
+                          href={prod.liveUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="btn btn-coral" 
+                          style={{ flex: '1 1 180px', display: 'inline-flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}
+                        >
+                          <span>Launch Live App</span>
+                          <ExternalLink size={16} />
+                        </a>
+                        <Link 
+                          to={prod.path} 
+                          className="btn btn-outline-dark" 
+                          style={{ flex: '1 1 140px', display: 'inline-flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}
+                        >
+                          <span>Details</span>
+                          <ArrowRight size={16} />
+                        </Link>
+                      </>
+                    ) : (
+                      <Link 
+                        to={prod.path} 
+                        className="btn btn-coral" 
+                        style={{ width: '100%', display: 'inline-flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}
+                      >
+                        <span>Explore Product Overview</span>
+                        <ArrowRight size={16} />
+                      </Link>
+                    )}
+                  </div>
 
                 </div>
               </div>

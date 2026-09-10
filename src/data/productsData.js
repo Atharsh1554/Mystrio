@@ -6,10 +6,11 @@ export const PRODUCTS = {
     name: 'GROOMER',
     icon: '💈',
     tagline: 'AI-Powered Grooming & Booking Platform',
+    liveUrl: 'https://groomer-app-steel.vercel.app/',
     shortDescription: 'An AI-powered grooming and booking platform designed to make salon discovery, appointment booking, and hairstyle exploration easier.',
     fullDescription: 'GROOMER redefines the grooming experience by pairing intelligent AI hairstyle recommendations with seamless salon appointment scheduling. Designed for both clients seeking personalized styling advice and salon owners wanting efficient booking workflows.',
-    status: 'Prototype / Active Development',
-    statusBadge: 'Prototype',
+    status: 'Live Platform',
+    statusBadge: 'Live',
     tags: ['AI', 'Grooming', 'Booking'],
     colorScheme: {
       primary: '#FF5E3A',
@@ -42,7 +43,7 @@ export const PRODUCTS = {
       }
     ],
     knownTech: ['React / Vite UI', 'AI Computer Vision Modules', 'Restful Booking API Architecture', 'Tailored Recommendation Engine'],
-    developmentPhase: 'Prototype Stage — Active internal testing and algorithm refinement.'
+    developmentPhase: 'Live Platform — Active web deployment with AI styling & booking features.'
   },
 
   'broker-hub': {
@@ -52,10 +53,11 @@ export const PRODUCTS = {
     name: 'BROKER HUB',
     icon: '🤝',
     tagline: 'Digital Broker Platform & Workflow Simplifier',
+    liveUrl: 'https://new-brokerhub.vercel.app/',
     shortDescription: 'A digital platform designed to modernize broker-related workflows and simplify interactions between brokers and users.',
     fullDescription: 'BROKER HUB is engineered to eliminate fragmentation in broker ecosystems. By streamlining lead management, document exchanges, and client communication into a unified digital workspace, it empowers brokers to operate faster and build stronger client trust.',
-    status: 'In Development',
-    statusBadge: 'In Development',
+    status: 'Live Platform',
+    statusBadge: 'Live',
     tags: ['Digital Platform', 'Business', 'Workflow'],
     colorScheme: {
       primary: '#10B981',
@@ -88,7 +90,7 @@ export const PRODUCTS = {
       }
     ],
     knownTech: ['Modern Web Architecture', 'Encrypted Document Engine', 'Real-Time Notification Pipeline'],
-    developmentPhase: 'In Development — Core workflow modules and user dashboard undergoing active construction.'
+    developmentPhase: 'Live Platform — Unified digital brokerage platform with deal pipeline and document workflow.'
   },
 
   foodshare: {
@@ -98,10 +100,11 @@ export const PRODUCTS = {
     name: 'FOODSHARE',
     icon: '🍱',
     tagline: 'Food Redistribution & Social Impact Network',
+    liveUrl: 'https://food-donation-app-ten.vercel.app/',
     shortDescription: 'A digital platform focused on connecting food availability with people who need it while encouraging responsible food sharing and reducing unnecessary waste.',
     fullDescription: 'FOODSHARE leverages technology to address food surplus. By connecting food providers, events, restaurants, and individuals with local community networks, FOODSHARE turns excess food into community nourishment.',
-    status: 'In Development',
-    statusBadge: 'In Development',
+    status: 'Live Platform',
+    statusBadge: 'Live',
     tags: ['Food', 'Community', 'Social Impact'],
     colorScheme: {
       primary: '#22C55E',
@@ -134,7 +137,7 @@ export const PRODUCTS = {
       }
     ],
     knownTech: ['Geospatial Mapping Utilities', 'Real-Time Alert Dispatcher', 'Impact Calculation Metrics'],
-    developmentPhase: 'In Development — Interface design and community protocol testing.'
+    developmentPhase: 'Live Platform — Food donation network connecting donors with local communities.'
   },
 
   remix: {
@@ -144,6 +147,7 @@ export const PRODUCTS = {
     name: 'REMIX',
     icon: '🎬',
     tagline: 'Digital Entertainment & Media Streaming Platform',
+    liveUrl: null,
     shortDescription: 'A digital streaming platform concept focused on delivering engaging entertainment and modern content experiences.',
     fullDescription: 'REMIX reimagines digital content streaming by merging fluid media playback with interactive audience engagement. Built for modern digital consumers who value discoverability, speed, and immersive media formats.',
     status: 'In Development',
