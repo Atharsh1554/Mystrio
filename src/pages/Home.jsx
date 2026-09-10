@@ -111,7 +111,7 @@ export const Home = () => {
             }}
           >
             Building the Future, <br />
-            <span style={{ background: 'linear-gradient(135deg, #FF5722 0%, #FF7A00 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            <span style={{ background: 'linear-gradient(135deg, #00D8FF 0%, #8B5CF6 50%, #EC4899 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               One Platform at a Time
             </span>
           </h1>
@@ -204,7 +204,7 @@ export const Home = () => {
                           display: 'inline-flex', 
                           alignItems: 'center', 
                           gap: '0.45rem', 
-                          color: '#FF5722', 
+                          color: '#00D8FF', 
                           fontWeight: 700, 
                           fontSize: '0.95rem',
                           textDecoration: 'none'
@@ -296,7 +296,7 @@ export const Home = () => {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.85rem' }}>
-                  <div style={{ color: '#FF5722', marginTop: '0.2rem' }}>
+                  <div style={{ color: '#00D8FF', marginTop: '0.2rem' }}>
                     <CheckCircle2 size={22} />
                   </div>
                   <div>
@@ -306,7 +306,7 @@ export const Home = () => {
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.85rem' }}>
-                  <div style={{ color: '#FF5722', marginTop: '0.2rem' }}>
+                  <div style={{ color: '#00D8FF', marginTop: '0.2rem' }}>
                     <CheckCircle2 size={22} />
                   </div>
                   <div>
@@ -316,7 +316,7 @@ export const Home = () => {
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.85rem' }}>
-                  <div style={{ color: '#FF5722', marginTop: '0.2rem' }}>
+                  <div style={{ color: '#00D8FF', marginTop: '0.2rem' }}>
                     <CheckCircle2 size={22} />
                   </div>
                   <div>
@@ -340,7 +340,7 @@ export const Home = () => {
               <div style={{ fontSize: 'clamp(3rem, 4.5vw, 4rem)', fontWeight: 800, color: '#FFFFFF', lineHeight: 1, fontFamily: 'Space Grotesk, sans-serif' }}>
                 4 Products
               </div>
-              <div style={{ color: '#FF5722', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.1em', marginTop: '0.85rem', textTransform: 'uppercase' }}>
+              <div style={{ color: '#00D8FF', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.1em', marginTop: '0.85rem', textTransform: 'uppercase' }}>
                 ACTIVE PLATFORMS
               </div>
             </div>
@@ -349,7 +349,7 @@ export const Home = () => {
               <div style={{ fontSize: 'clamp(3rem, 4.5vw, 4rem)', fontWeight: 800, color: '#FFFFFF', lineHeight: 1, fontFamily: 'Space Grotesk, sans-serif' }}>
                 3 Founders
               </div>
-              <div style={{ color: '#FF5722', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.1em', marginTop: '0.85rem', textTransform: 'uppercase' }}>
+              <div style={{ color: '#00D8FF', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.1em', marginTop: '0.85rem', textTransform: 'uppercase' }}>
                 DRIVING INNOVATION
               </div>
             </div>
@@ -358,7 +358,7 @@ export const Home = () => {
               <div style={{ fontSize: 'clamp(3rem, 4.5vw, 4rem)', fontWeight: 800, color: '#FFFFFF', lineHeight: 1, fontFamily: 'Space Grotesk, sans-serif' }}>
                 1 Vision
               </div>
-              <div style={{ color: '#FF5722', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.1em', marginTop: '0.85rem', textTransform: 'uppercase' }}>
+              <div style={{ color: '#00D8FF', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.1em', marginTop: '0.85rem', textTransform: 'uppercase' }}>
                 UNIFIED STANDARD
               </div>
             </div>
@@ -401,8 +401,8 @@ export const Home = () => {
                   borderRadius: '50%', 
                   margin: '0 auto 1.5rem auto',
                   overflow: 'hidden',
-                  border: '3px solid #FF5722',
-                  boxShadow: '0 8px 24px rgba(255, 87, 34, 0.25)'
+                  border: '3px solid #00D8FF',
+                  boxShadow: '0 8px 24px rgba(0, 216, 255, 0.25)'
                 }}
               >
                 <img 
@@ -416,7 +416,7 @@ export const Home = () => {
                 Atharsh S
               </h3>
 
-              <div style={{ color: '#FF5722', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.08em', marginBottom: '1.15rem' }}>
+              <div style={{ color: '#00D8FF', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.08em', marginBottom: '1.15rem' }}>
                 CO-FOUNDER
               </div>
 
@@ -443,8 +443,8 @@ export const Home = () => {
                   borderRadius: '50%', 
                   margin: '0 auto 1.5rem auto',
                   overflow: 'hidden',
-                  border: '3px solid #FF5722',
-                  boxShadow: '0 8px 24px rgba(255, 87, 34, 0.25)'
+                  border: '3px solid #00D8FF',
+                  boxShadow: '0 8px 24px rgba(0, 216, 255, 0.25)'
                 }}
               >
                 <img 
@@ -458,7 +458,7 @@ export const Home = () => {
                 Akash P
               </h3>
 
-              <div style={{ color: '#FF5722', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.08em', marginBottom: '1.15rem' }}>
+              <div style={{ color: '#00D8FF', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.08em', marginBottom: '1.15rem' }}>
                 CO-FOUNDER
               </div>
 
@@ -485,8 +485,8 @@ export const Home = () => {
                   borderRadius: '50%', 
                   margin: '0 auto 1.5rem auto',
                   overflow: 'hidden',
-                  border: '3px solid #FF5722',
-                  boxShadow: '0 8px 24px rgba(255, 87, 34, 0.25)'
+                  border: '3px solid #00D8FF',
+                  boxShadow: '0 8px 24px rgba(0, 216, 255, 0.25)'
                 }}
               >
                 <img 
@@ -500,7 +500,7 @@ export const Home = () => {
                 Ajay KS
               </h3>
 
-              <div style={{ color: '#FF5722', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.08em', marginBottom: '1.15rem' }}>
+              <div style={{ color: '#00D8FF', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.08em', marginBottom: '1.15rem' }}>
                 CO-FOUNDER
               </div>
 
@@ -533,9 +533,9 @@ export const Home = () => {
               textAlign: 'center',
               maxWidth: '920px',
               margin: '0 auto',
-              borderColor: 'rgba(255, 87, 34, 0.35)',
+              borderColor: 'rgba(0, 216, 255, 0.35)',
               background: 'linear-gradient(180deg, #101426 0%, #0A0D18 100%)',
-              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 87, 34, 0.15)'
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 216, 255, 0.15), 0 0 15px rgba(236, 72, 153, 0.1)'
             }}
           >
             <div className="badge-pill-orange" style={{ marginBottom: '1.5rem' }}>

@@ -80,7 +80,7 @@ export const ProductModal = ({ product, onClose }) => {
         <div style={{ padding: '1.75rem 2rem 2.25rem 2.25rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
             <h3 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#FFFFFF' }}>{product.title}</h3>
-            <span style={{ fontSize: '0.85rem', color: '#FF5722', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            <span style={{ fontSize: '0.85rem', color: '#00D8FF', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
               {product.category}
             </span>
           </div>
@@ -97,7 +97,7 @@ export const ProductModal = ({ product, onClose }) => {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem' }}>
               {(product.features || ['Real-time Synchronization', 'User-first UI/UX', 'Cloud Native Architecture', 'End-to-End Encryption']).map((feat, idx) => (
                 <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#E2E8F0', fontSize: '0.875rem' }}>
-                  <CheckCircle2 size={16} color="#FF5722" />
+                  <CheckCircle2 size={16} color="#00D8FF" />
                   <span>{feat}</span>
                 </div>
               ))}

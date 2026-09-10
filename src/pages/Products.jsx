@@ -20,7 +20,7 @@ export const Products = () => {
             <span>DIGITAL PRODUCT SUITE</span>
           </div>
           <h1 style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.75rem)', fontWeight: 800, color: '#FFFFFF', marginBottom: '1rem' }}>
-            Products Built by <span style={{ color: '#FF5252' }}>Mystrio</span>
+            Products Built by <span className="text-gradient-brand">Mystrio</span>
           </h1>
           <p style={{ fontSize: '1.15rem', color: 'var(--text-muted-dark)', maxWidth: '600px', margin: '0 auto' }}>
             Different problems. Different products. One technology vision.
@@ -43,7 +43,7 @@ export const Products = () => {
                     </span>
                   </div>
 
-                  <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#FF5252', marginBottom: '1rem' }}>
+                  <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#00D8FF', marginBottom: '1rem' }}>
                     {prod.tagline}
                   </div>
 

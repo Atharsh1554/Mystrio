@@ -57,7 +57,7 @@ export const About = () => {
           </div>
 
           <h1 style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.75rem)', fontWeight: 800, color: '#FFFFFF', marginBottom: '1.25rem' }}>
-            About <span style={{ color: '#FF5252' }}>Mystrio</span>
+            About <span className="text-gradient-brand">Mystrio</span>
           </h1>
 
           <p style={{ fontSize: '1.2rem', color: 'var(--text-muted-dark)', maxWidth: '650px', margin: '0 auto', lineHeight: 1.6 }}>
@@ -99,7 +99,7 @@ export const About = () => {
               </h3>
 
               <div style={{ marginBottom: '1.5rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#FF5252', fontWeight: 700, marginBottom: '0.4rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#00D8FF', fontWeight: 700, marginBottom: '0.4rem' }}>
                   <Eye size={18} />
                   <span>OUR VISION</span>
                 </div>
@@ -109,7 +109,7 @@ export const About = () => {
               </div>
 
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#FF5252', fontWeight: 700, marginBottom: '0.4rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#00D8FF', fontWeight: 700, marginBottom: '0.4rem' }}>
                   <Target size={18} />
                   <span>OUR MISSION</span>
                 </div>
@@ -151,8 +151,8 @@ export const About = () => {
                     borderRadius: '50%', 
                     margin: '0 auto 1.5rem auto',
                     overflow: 'hidden',
-                    border: '3px solid #FF5252',
-                    boxShadow: '0 8px 20px rgba(255, 82, 82, 0.2)'
+                    border: '3px solid #00D8FF',
+                    boxShadow: '0 8px 20px rgba(0, 216, 255, 0.25)'
                   }}
                 >
                   <img 
@@ -166,7 +166,7 @@ export const About = () => {
                   {founder.name}
                 </h3>
 
-                <div style={{ color: '#FF5252', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.05em', marginBottom: '0.75rem' }}>
+                <div style={{ color: '#00D8FF', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.05em', marginBottom: '0.75rem' }}>
                   {founder.role.toUpperCase()}
                 </div>
 
@@ -205,11 +205,11 @@ export const About = () => {
               const Icon = step.icon;
               return (
                 <div key={step.step} className="card-dark" style={{ padding: '2rem 1.5rem', textAlign: 'center' }}>
-                  <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#FF5252', marginBottom: '0.75rem' }}>
+                  <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#00D8FF', marginBottom: '0.75rem' }}>
                     STAGE {step.step}
                   </div>
 
-                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(255, 82, 82, 0.1)', color: '#FF5252', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem auto' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 216, 255, 0.1)', color: '#00D8FF', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem auto' }}>
                     <Icon size={22} />
                   </div>
 

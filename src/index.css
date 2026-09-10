@@ -1,21 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-  /* Color Palette matching Figma design */
-  --bg-dark: #0B0E17;
-  --bg-dark-secondary: #0A0D18;
-  --bg-card-dark: #101426;
-  --bg-card-dark-hover: #161B33;
+  /* Dark Canvas Theme matching Mystrio deep space palette */
+  --bg-dark: #070913;
+  --bg-dark-secondary: #0B0E1B;
+  --bg-card-dark: #0F1424;
+  --bg-card-dark-hover: #151C33;
   
-  --bg-light: #F4F5F7;
+  --bg-light: #F4F6FB;
   --bg-card-light: #FFFFFF;
   
-  /* Brand Orange Primary Gradient matching Figma */
-  --orange-primary: #FF5722;
-  --orange-gradient: linear-gradient(135deg, #FF5722 0%, #FF7A00 100%);
-  --orange-hover: #E64A19;
-  --orange-light: rgba(255, 87, 34, 0.12);
-  --orange-border: rgba(255, 87, 34, 0.3);
+  /* Brand Signature Gradient Palette from Logo (Neon Cyan -> Purple -> Magenta) */
+  --brand-cyan: #00D8FF;
+  --brand-purple: #8B5CF6;
+  --brand-pink: #EC4899;
+  --brand-primary: #00D8FF;
+  
+  --brand-gradient: linear-gradient(135deg, #00D8FF 0%, #8B5CF6 50%, #EC4899 100%);
+  --brand-gradient-hover: linear-gradient(135deg, #38BDF8 0%, #A855F7 50%, #F43F5E 100%);
+  --brand-gradient-cyan: linear-gradient(135deg, #00D8FF 0%, #0284C7 100%);
+  --brand-gradient-pink: linear-gradient(135deg, #D946EF 0%, #EC4899 100%);
+  
+  --brand-light: rgba(0, 216, 255, 0.12);
+  --brand-border: rgba(0, 216, 255, 0.28);
+  --brand-glow: 0 0 25px rgba(0, 216, 255, 0.35);
+
+  /* Legacy color variables mapped to new logo theme */
+  --orange-primary: #00D8FF;
+  --orange-gradient: linear-gradient(135deg, #00D8FF 0%, #8B5CF6 50%, #EC4899 100%);
+  --orange-hover: #0284C7;
+  --orange-light: rgba(0, 216, 255, 0.12);
+  --orange-border: rgba(0, 216, 255, 0.3);
 
   /* Status Colors */
   --badge-live-bg: rgba(16, 185, 129, 0.12);
@@ -35,7 +50,7 @@
   /* Borders & Shadows */
   --border-dark-subtle: rgba(255, 255, 255, 0.08);
   --border-light-subtle: rgba(15, 23, 42, 0.08);
-  --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+  --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
   --light-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 
   --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -73,7 +88,7 @@ body {
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--orange-primary);
+  background: var(--brand-primary);
 }
 
 /* Typography */
@@ -147,18 +162,18 @@ a {
   }
 }
 
-/* Component Styling */
-
 /* Badges */
-.badge-pill-orange {
+.badge-pill-orange,
+.badge-pill-coral,
+.badge-pill-brand {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.4rem 1.1rem;
   border-radius: 100px;
-  background: var(--orange-light);
-  border: 1px solid var(--orange-border);
-  color: var(--orange-primary);
+  background: rgba(0, 216, 255, 0.1);
+  border: 1px solid rgba(0, 216, 255, 0.3);
+  color: #00D8FF;
   font-size: 0.775rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -171,9 +186,9 @@ a {
   gap: 0.5rem;
   padding: 0.4rem 1.1rem;
   border-radius: 100px;
-  background: rgba(255, 87, 34, 0.1);
-  border: 1px solid rgba(255, 87, 34, 0.25);
-  color: var(--orange-primary);
+  background: rgba(0, 216, 255, 0.1);
+  border: 1px solid rgba(0, 216, 255, 0.25);
+  color: #00D8FF;
   font-size: 0.775rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -216,16 +231,20 @@ a {
   border: none;
 }
 
-.btn-orange {
-  background: var(--orange-gradient);
+.btn-orange,
+.btn-coral,
+.btn-brand {
+  background: var(--brand-gradient);
   color: #FFFFFF;
-  box-shadow: 0 4px 18px rgba(255, 87, 34, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 216, 255, 0.3), 0 0 15px rgba(236, 72, 153, 0.2);
 }
 
-.btn-orange:hover {
+.btn-orange:hover,
+.btn-coral:hover,
+.btn-brand:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 87, 34, 0.5);
-  filter: brightness(1.05);
+  box-shadow: 0 8px 28px rgba(0, 216, 255, 0.5), 0 0 25px rgba(236, 72, 153, 0.35);
+  filter: brightness(1.08);
 }
 
 .btn-outline-dark {
@@ -236,8 +255,9 @@ a {
 }
 
 .btn-outline-dark:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 216, 255, 0.08);
+  border-color: rgba(0, 216, 255, 0.4);
+  color: #00D8FF;
   transform: translateY(-2px);
 }
 
@@ -252,8 +272,8 @@ a {
 
 .card-dark:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 87, 34, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 87, 34, 0.15);
+  border-color: rgba(0, 216, 255, 0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 216, 255, 0.15), 0 0 15px rgba(236, 72, 153, 0.1);
 }
 
 .card-light {
@@ -273,20 +293,26 @@ a {
 /* Background Tech Grid effect */
 .bg-grid-pattern {
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(0, 216, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 216, 255, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
-.glow-orange-radial {
+.glow-orange-radial,
+.glow-brand-radial {
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(255, 87, 34, 0.14) 0%, rgba(11, 14, 23, 0) 70%);
+  background: radial-gradient(circle, rgba(0, 216, 255, 0.15) 0%, rgba(139, 92, 246, 0.08) 40%, rgba(7, 9, 19, 0) 70%);
   pointer-events: none;
   z-index: 0;
 }
 
+.text-gradient-brand {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

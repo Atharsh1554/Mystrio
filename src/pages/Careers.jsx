@@ -29,7 +29,7 @@ export const Careers = () => {
           </div>
 
           <h1 style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.75rem)', fontWeight: 800, color: '#FFFFFF', marginBottom: '1rem' }}>
-            Build the Future <span style={{ color: '#FF5252' }}>With Mystrio</span>
+            Build the Future <span className="text-gradient-brand">With Mystrio</span>
           </h1>
 
           <p style={{ fontSize: '1.15rem', color: 'var(--text-muted-dark)', maxWidth: '650px', margin: '0 auto' }}>
@@ -57,7 +57,7 @@ export const Careers = () => {
 
           <div className="grid-3" style={{ gap: '2rem' }}>
             <div className="card-light" style={{ padding: '2.25rem', textAlign: 'center' }}>
-              <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(255, 82, 82, 0.1)', color: '#FF5252', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem auto' }}>
+              <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 216, 255, 0.1)', color: '#00D8FF', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem auto' }}>
                 <Lightbulb size={24} />
               </div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-dark)', marginBottom: '0.5rem' }}>First-Principles Thinking</h3>
@@ -65,7 +65,7 @@ export const Careers = () => {
             </div>
 
             <div className="card-light" style={{ padding: '2.25rem', textAlign: 'center' }}>
-              <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(255, 82, 82, 0.1)', color: '#FF5252', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem auto' }}>
+              <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 216, 255, 0.1)', color: '#00D8FF', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem auto' }}>
                 <Rocket size={24} />
               </div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-dark)', marginBottom: '0.5rem' }}>Multi-Product Ownership</h3>
@@ -73,7 +73,7 @@ export const Careers = () => {
             </div>
 
             <div className="card-light" style={{ padding: '2.25rem', textAlign: 'center' }}>
-              <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(255, 82, 82, 0.1)', color: '#FF5252', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem auto' }}>
+              <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 216, 255, 0.1)', color: '#00D8FF', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem auto' }}>
                 <Users size={24} />
               </div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-dark)', marginBottom: '0.5rem' }}>Founder Mentorship</h3>
@@ -106,12 +106,12 @@ export const Careers = () => {
               return (
                 <div key={role.id} className="card-dark" style={{ padding: '2rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.25rem' }}>
-                    <div style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'rgba(255, 82, 82, 0.1)', color: '#FF5252', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <div style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'rgba(0, 216, 255, 0.1)', color: '#00D8FF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <IconComp size={22} />
                     </div>
                     <div>
                       <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#FFFFFF' }}>{role.title}</h3>
-                      <div style={{ fontSize: '0.8rem', color: '#FF5252', fontWeight: 600 }}>{role.domain} • {role.type}</div>
+                      <div style={{ fontSize: '0.8rem', color: '#00D8FF', fontWeight: 600 }}>{role.domain} • {role.type}</div>
                     </div>
                   </div>
 

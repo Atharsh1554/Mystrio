@@ -22,7 +22,7 @@ export const Blog = () => {
           </div>
 
           <h1 style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.75rem)', fontWeight: 800, color: '#FFFFFF', marginBottom: '1rem' }}>
-            Mystrio <span style={{ color: '#FF5252' }}>Engineering & Vision</span>
+            Mystrio <span className="text-gradient-brand">Engineering & Vision</span>
           </h1>
 
           <p style={{ fontSize: '1.15rem', color: 'var(--text-muted-dark)', maxWidth: '650px', margin: '0 auto' }}>
@@ -56,7 +56,7 @@ export const Blog = () => {
 
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '1.25rem', borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
                   <span style={{ fontSize: '0.85rem', color: '#94A3B8', fontWeight: 600 }}>By {post.author} • {post.date}</span>
-                  <span style={{ color: '#FF5252', fontWeight: 700, fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                  <span style={{ color: '#00D8FF', fontWeight: 700, fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
                     Read Article <ArrowRight size={15} />
                   </span>
                 </div>
@@ -82,7 +82,7 @@ export const Blog = () => {
                 </div>
 
                 <h2 style={{ fontSize: '2rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '1rem' }}>{selectedPost.title}</h2>
-                <div style={{ color: '#FF5252', fontSize: '0.9rem', fontWeight: 600, marginBottom: '2rem' }}>By {selectedPost.author} • {selectedPost.date}</div>
+                <div style={{ color: '#00D8FF', fontSize: '0.9rem', fontWeight: 600, marginBottom: '2rem' }}>By {selectedPost.author} • {selectedPost.date}</div>
 
                 <div style={{ color: 'var(--text-muted-dark)', fontSize: '1.05rem', lineHeight: 1.8 }}>
                   <p style={{ marginBottom: '1.5rem' }}>{selectedPost.excerpt}</p>

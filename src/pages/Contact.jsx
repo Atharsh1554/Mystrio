@@ -44,7 +44,7 @@ export const Contact = () => {
           </div>
 
           <h1 style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.75rem)', fontWeight: 800, color: '#FFFFFF', marginBottom: '1.25rem' }}>
-            Let's Build <span style={{ color: '#FF5252' }}>Something Together</span>
+            Let's Build <span className="text-gradient-brand">Something Together</span>
           </h1>
 
           <p style={{ fontSize: '1.2rem', color: 'var(--text-muted-dark)', maxWidth: '650px', margin: '0 auto 2.5rem auto', lineHeight: 1.6 }}>
@@ -62,7 +62,7 @@ export const Contact = () => {
               maxWidth: '750px', 
               margin: '0 auto', 
               padding: '3rem 2.5rem',
-              borderColor: 'rgba(255, 82, 82, 0.3)'
+              borderColor: 'rgba(0, 216, 255, 0.3)'
             }}
           >
             {formStatus === 'success' ? (

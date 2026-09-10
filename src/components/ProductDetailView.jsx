@@ -45,16 +45,16 @@ export const ProductDetailView = ({ product }) => {
       {/* Hero */}
       <section className="section-dark bg-grid-pattern" style={{ paddingTop: '1rem', paddingBottom: '4rem' }}>
         <div className="container">
-          <div className="card-dark" style={{ padding: '3rem 2.5rem', borderColor: 'rgba(255, 82, 82, 0.3)' }}>
+          <div className="card-dark" style={{ padding: '3rem 2.5rem', borderColor: 'rgba(0, 216, 255, 0.3)' }}>
             
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1.25rem', marginBottom: '1.5rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
-                <div style={{ fontSize: '2.25rem', width: '72px', height: '72px', borderRadius: '16px', background: 'rgba(255, 82, 82, 0.12)', color: '#FF5252', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255, 82, 82, 0.3)' }}>
+                <div style={{ fontSize: '2.25rem', width: '72px', height: '72px', borderRadius: '16px', background: 'rgba(0, 216, 255, 0.12)', color: '#00D8FF', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(0, 216, 255, 0.3)' }}>
                   {product.icon}
                 </div>
                 <div>
                   <h1 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '0.25rem' }}>{product.name}</h1>
-                  <p style={{ fontSize: '1.1rem', color: '#FF5252', fontWeight: 600 }}>{product.tagline}</p>
+                  <p style={{ fontSize: '1.1rem', color: '#00D8FF', fontWeight: 600 }}>{product.tagline}</p>
                 </div>
               </div>
 
@@ -96,7 +96,7 @@ export const ProductDetailView = ({ product }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    color: '#FF5252',
+                    color: '#00D8FF',
                     fontSize: '0.9rem',
                     fontWeight: 600,
                     display: 'inline-flex',
@@ -137,7 +137,7 @@ export const ProductDetailView = ({ product }) => {
               const IconComp = ICON_MAP[feat.icon] || Zap;
               return (
                 <div key={feat.title} className="card-dark" style={{ padding: '2rem' }}>
-                  <div style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'rgba(255, 82, 82, 0.1)', color: '#FF5252', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
+                  <div style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'rgba(0, 216, 255, 0.1)', color: '#00D8FF', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
                     <IconComp size={22} />
                   </div>
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.5rem' }}>{feat.title}</h3>
