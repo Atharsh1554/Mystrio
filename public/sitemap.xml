@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mystrio.tech/</loc>
+    <loc>https://mystrio.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mystrio.tech/about</loc>
+    <loc>https://mystrio.vercel.app/about</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mystrio.tech/products</loc>
+    <loc>https://mystrio.vercel.app/products</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mystrio.tech/products/groomer</loc>
+    <loc>https://mystrio.vercel.app/products/groomer</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mystrio.tech/products/broker-hub</loc>
+    <loc>https://mystrio.vercel.app/products/broker-hub</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mystrio.tech/products/foodshare</loc>
+    <loc>https://mystrio.vercel.app/products/foodshare</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mystrio.tech/products/remix</loc>
+    <loc>https://mystrio.vercel.app/products/remix</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mystrio.tech/careers</loc>
+    <loc>https://mystrio.vercel.app/careers</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mystrio.tech/blog</loc>
+    <loc>https://mystrio.vercel.app/blog</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mystrio.tech/contact</loc>
+    <loc>https://mystrio.vercel.app/contact</loc>
     <priority>0.7</priority>
   </url>
 </urlset>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mystrio.tech/sitemap.xml
+Sitemap: https://mystrio.vercel.app/sitemap.xml
