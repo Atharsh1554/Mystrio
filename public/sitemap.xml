@@ -1,43 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
   <url>
     <loc>https://mystrio.vercel.app/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- About -->
   <url>
     <loc>https://mystrio.vercel.app/about</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Products (index) -->
   <url>
     <loc>https://mystrio.vercel.app/products</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Product: GROOMER -->
   <url>
     <loc>https://mystrio.vercel.app/products/groomer</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Product: BROKER HUB -->
   <url>
     <loc>https://mystrio.vercel.app/products/broker-hub</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Product: FOODSHARE -->
   <url>
     <loc>https://mystrio.vercel.app/products/foodshare</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Product: REMIX -->
   <url>
     <loc>https://mystrio.vercel.app/products/remix</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
+
+  <!-- Careers -->
   <url>
     <loc>https://mystrio.vercel.app/careers</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Blog -->
   <url>
     <loc>https://mystrio.vercel.app/blog</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Contact -->
   <url>
     <loc>https://mystrio.vercel.app/contact</loc>
-    <priority>0.7</priority>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
+
 </urlset>

@@ -1,4 +1,21 @@
 User-agent: *
+
+# Allow all public pages
 Allow: /
+Allow: /about
+Allow: /products
+Allow: /products/groomer
+Allow: /products/broker-hub
+Allow: /products/foodshare
+Allow: /products/remix
+Allow: /careers
+Allow: /blog
+Allow: /contact
+
+# Block non-public / internal paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_/
+Disallow: /private/
 
 Sitemap: https://mystrio.vercel.app/sitemap.xml
