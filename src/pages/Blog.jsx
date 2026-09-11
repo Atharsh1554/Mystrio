@@ -9,8 +9,17 @@ export const Blog = () => {
   return (
     <>
       <SEOHead
-        title="Mystrio Blog — Technology, AI & Startup Insights"
-        description="Read articles and product engineering insights from Mystrio founders Atharsh S, Ajay KS, and Akash P."
+        title="MYSTRIO Blog | Technology & Innovation"
+        description="Read engineering insights, product spotlights, and technology perspectives from the MYSTRIO team — covering AI, software, digital innovation, and startup building."
+        canonical="/blog"
+        jsonLd={[{
+          '@context': 'https://schema.org',
+          '@type': 'Blog',
+          name: 'MYSTRIO Blog',
+          url: 'https://mystrio.vercel.app/blog',
+          description: 'Engineering insights, product spotlights, and technology perspectives from the MYSTRIO team.',
+          publisher: { '@type': 'Organization', name: 'MYSTRIO', url: 'https://mystrio.vercel.app/' }
+        }]}
       />
 
       {/* Hero (Dark) */}

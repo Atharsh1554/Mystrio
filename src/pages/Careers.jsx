@@ -15,9 +15,22 @@ export const Careers = () => {
 
   return (
     <>
-      <SEOHead 
-        title="Careers & Team at Mystrio — Build the Future With Us"
-        description="Join Mystrio. Founded by Atharsh S, Ajay KS, and Akash P, we build cutting-edge digital platforms across AI, food sustainability, and media."
+      <SEOHead
+        title="Careers at MYSTRIO | Technology & Innovation"
+        description="Join MYSTRIO and build the future of technology. Explore open roles in software engineering, AI, design, and product growth at an emerging technology brand."
+        canonical="/careers"
+        jsonLd={[{
+          '@context': 'https://schema.org',
+          '@type': 'JobPosting',
+          'hiringOrganization': {
+            '@type': 'Organization',
+            'name': 'MYSTRIO',
+            'url': 'https://mystrio.vercel.app/'
+          },
+          'description': 'MYSTRIO is hiring engineers, designers, and growth managers to build innovative digital solutions using AI and modern software.',
+          'jobLocation': { '@type': 'Place', 'address': { '@type': 'PostalAddress', 'addressCountry': 'IN' } },
+          'employmentType': 'FULL_TIME'
+        }]}
       />
 
       {/* Hero (Dark) */}

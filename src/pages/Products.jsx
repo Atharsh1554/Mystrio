@@ -8,8 +8,17 @@ export const Products = () => {
   return (
     <>
       <SEOHead
-        title="Products Built by Mystrio — Ecosystem Showcase"
-        description="Explore the Mystrio digital product ecosystem: Groomer, Broker Hub, FoodShare, and Remix."
+        title="MYSTRIO Products | Digital Innovation & Technology"
+        description="Explore MYSTRIO's digital product ecosystem — GROOMER, BROKER HUB, FOODSHARE, and REMIX. Innovative software and AI solutions built for real-world impact."
+        canonical="/products"
+        jsonLd={[{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'MYSTRIO Products',
+          url: 'https://mystrio.vercel.app/products',
+          description: 'Explore MYSTRIO\'s digital product ecosystem — GROOMER, BROKER HUB, FOODSHARE, and REMIX. Innovative software and AI solutions built for real-world impact.',
+          isPartOf: { '@type': 'WebSite', name: 'MYSTRIO', url: 'https://mystrio.vercel.app/' }
+        }]}
       />
 
       {/* Hero (Dark) */}

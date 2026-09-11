@@ -36,7 +36,8 @@ export const Footer = () => {
             </Link>
 
             <p style={{ fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.5rem', color: '#94A3B8' }}>
-              Mystrio is a tech startup crafting innovative digital platforms that simplify everyday life — from grooming and commercial ecosystems to food sharing and digital entertainment.
+              MYSTRIO is an emerging technology brand building innovative digital solutions
+              using AI, software and modern technology.
             </p>
 
             <div style={{ display: 'flex', gap: '0.8rem' }}>
@@ -59,10 +60,10 @@ export const Footer = () => {
               OUR PRODUCTS
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.9rem' }}>
-              <li><a href="#products" style={{ color: '#94A3B8', transition: 'color 0.2s' }}>Groomer (AI Booking)</a></li>
-              <li><a href="#products" style={{ color: '#94A3B8', transition: 'color 0.2s' }}>Broker Hub (Digital Platform)</a></li>
-              <li><a href="#products" style={{ color: '#94A3B8', transition: 'color 0.2s' }}>Foodshare (Food Waste)</a></li>
-              <li><a href="#products" style={{ color: '#94A3B8', transition: 'color 0.2s' }}>Remix (Digital Streaming)</a></li>
+              <li><Link to="/products/groomer" style={{ color: '#94A3B8', transition: 'color 0.2s', textDecoration: 'none' }}>Groomer (AI Booking)</Link></li>
+              <li><Link to="/products/broker-hub" style={{ color: '#94A3B8', transition: 'color 0.2s', textDecoration: 'none' }}>Broker Hub (Digital Platform)</Link></li>
+              <li><Link to="/products/foodshare" style={{ color: '#94A3B8', transition: 'color 0.2s', textDecoration: 'none' }}>Foodshare (Food Waste)</Link></li>
+              <li><Link to="/products/remix" style={{ color: '#94A3B8', transition: 'color 0.2s', textDecoration: 'none' }}>Remix (Digital Streaming)</Link></li>
             </ul>
           </div>
 
@@ -72,10 +73,10 @@ export const Footer = () => {
               COMPANY
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.9rem' }}>
-              <li><a href="#mission" style={{ color: '#94A3B8' }}>About Us</a></li>
-              <li><a href="#founders" style={{ color: '#94A3B8' }}>Founding Team</a></li>
-              <li><a href="#founders" style={{ color: '#94A3B8' }}>Careers & Roles</a></li>
-              <li><a href="#contact" style={{ color: '#94A3B8' }}>Contact & Inquiry</a></li>
+              <li><Link to="/about" style={{ color: '#94A3B8', textDecoration: 'none' }}>About Us</Link></li>
+              <li><Link to="/about" style={{ color: '#94A3B8', textDecoration: 'none' }}>Founding Team</Link></li>
+              <li><Link to="/careers" style={{ color: '#94A3B8', textDecoration: 'none' }}>Careers &amp; Roles</Link></li>
+              <li><Link to="/contact" style={{ color: '#94A3B8', textDecoration: 'none' }}>Contact &amp; Inquiry</Link></li>
             </ul>
           </div>
 

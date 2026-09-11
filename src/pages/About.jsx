@@ -44,8 +44,17 @@ export const About = () => {
   return (
     <>
       <SEOHead
-        title="About Mystrio — Founders & Building Technology With Purpose"
-        description="Learn about Mystrio, founded by Atharsh S, Ajay KS, and Akash P, combining modern software, artificial intelligence, and user-focused design."
+        title="About MYSTRIO | Technology & Innovation"
+        description="Learn about MYSTRIO — an emerging technology brand founded by Atharsh S, Akash P, and Ajay KS, building innovative AI and software solutions."
+        canonical="/about"
+        jsonLd={[{
+          '@context': 'https://schema.org',
+          '@type': 'AboutPage',
+          name: 'About MYSTRIO',
+          url: 'https://mystrio.vercel.app/about',
+          description: 'Learn about MYSTRIO — an emerging technology brand founded by Atharsh S, Akash P, and Ajay KS, building innovative AI and software solutions.',
+          isPartOf: { '@type': 'WebSite', name: 'MYSTRIO', url: 'https://mystrio.vercel.app/' }
+        }]}
       />
 
       {/* Hero Section (Dark) */}
@@ -57,11 +66,12 @@ export const About = () => {
           </div>
 
           <h1 style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.75rem)', fontWeight: 800, color: '#FFFFFF', marginBottom: '1.25rem' }}>
-            About <span className="text-gradient-brand">Mystrio</span>
+            About <span className="text-gradient-brand">MYSTRIO</span>
           </h1>
 
           <p style={{ fontSize: '1.2rem', color: 'var(--text-muted-dark)', maxWidth: '650px', margin: '0 auto', lineHeight: 1.6 }}>
-            Building technology with purpose. Solving real-world problems through digital innovation.
+            MYSTRIO is an emerging technology brand building innovative digital solutions
+            through modern software, AI, and user-centered design.
           </p>
         </div>
       </section>

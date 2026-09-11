@@ -17,8 +17,20 @@ export const ProductDetailView = ({ product }) => {
   return (
     <>
       <SEOHead
-        title={`${product.name} — ${product.tagline}`}
+        title={`${product.name} by MYSTRIO | ${product.tagline}`}
         description={product.shortDescription}
+        canonical={product.path}
+        jsonLd={[{
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareApplication',
+          name: product.name,
+          url: product.liveUrl || `https://mystrio.vercel.app${product.path}`,
+          description: product.shortDescription,
+          applicationCategory: 'WebApplication',
+          operatingSystem: 'Web',
+          author: { '@type': 'Organization', name: 'MYSTRIO', url: 'https://mystrio.vercel.app/' },
+          ...(product.liveUrl ? { installUrl: product.liveUrl } : {})
+        }]}
       />
 
       {/* Breadcrumb */}

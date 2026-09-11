@@ -30,9 +30,18 @@ export const Contact = () => {
 
   return (
     <>
-      <SEOHead 
-        title="Contact Mystrio — Let's Build Something Together" 
-        description="Have an idea, question, collaboration opportunity, or feedback? Contact Atharsh S, Ajay KS, Akash P and the Mystrio team."
+      <SEOHead
+        title="Contact MYSTRIO | Technology & Innovation"
+        description="Get in touch with MYSTRIO. Reach out for partnerships, investment, collaboration, or general enquiries about our technology and digital products."
+        canonical="/contact"
+        jsonLd={[{
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          name: 'Contact MYSTRIO',
+          url: 'https://mystrio.vercel.app/contact',
+          description: 'Get in touch with MYSTRIO for partnerships, investment, collaboration, or general enquiries.',
+          isPartOf: { '@type': 'WebSite', name: 'MYSTRIO', url: 'https://mystrio.vercel.app/' }
+        }]}
       />
 
       {/* Hero Section */}
