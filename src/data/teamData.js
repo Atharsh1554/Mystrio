@@ -30,7 +30,7 @@ export const TEAM_MEMBERS = [
     contact: {
       email: 'atharsh@mystrio.com',
       github: 'https://github.com/Atharsh1554',
-      linkedin: 'https://linkedin.com/in/atharsh-s'
+      linkedin: 'https://www.linkedin.com/in/atharsh-s-20462a282?utm_source=share_via&utm_content=profile&utm_medium=member_android'
     }
   },
   {
@@ -117,7 +117,7 @@ export const TEAM_MEMBERS = [
     contact: {
       email: 'kishore@mystrio.com',
       github: 'https://github.com/mystrio',
-      linkedin: 'https://linkedin.com/in/kishore-d'
+      linkedin: 'https://www.linkedin.com/in/kishore-dhanasangu?utm_source=share_via&utm_content=profile&utm_medium=member_android'
     }
   }
 ];
