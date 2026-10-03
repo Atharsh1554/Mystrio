@@ -89,13 +89,8 @@ export const TeamMemberDetail = () => {
           </div>
 
           <div 
-            className="card-dark" 
+            className="card-dark profile-hero-card" 
             style={{ 
-              padding: '3rem 2.5rem', 
-              display: 'grid', 
-              gridTemplateColumns: 'minmax(200px, 280px) 1fr', 
-              gap: '3rem',
-              alignItems: 'center',
               boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)'
             }}
           >
@@ -103,8 +98,8 @@ export const TeamMemberDetail = () => {
             <div style={{ textAlign: 'center' }}>
               <div 
                 style={{ 
-                  width: '200px', 
-                  height: '200px', 
+                  width: 'clamp(150px, 40vw, 200px)', 
+                  height: 'clamp(150px, 40vw, 200px)', 
                   borderRadius: '50%', 
                   margin: '0 auto 1.5rem auto', 
                   overflow: 'hidden',
@@ -195,11 +190,11 @@ export const TeamMemberDetail = () => {
                 </span>
               </div>
 
-              <h1 style={{ fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 800, color: '#FFFFFF', marginBottom: '0.5rem', lineHeight: 1.1 }}>
+              <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#FFFFFF', marginBottom: '0.5rem', lineHeight: 1.1 }}>
                 {member.name}
               </h1>
 
-              <div style={{ fontSize: '1.2rem', fontWeight: 700, color: '#00D8FF', marginBottom: '1.25rem' }}>
+              <div style={{ fontSize: 'clamp(1rem, 2.5vw, 1.2rem)', fontWeight: 700, color: '#00D8FF', marginBottom: '1.25rem' }}>
                 {member.title}
               </div>
 
@@ -207,7 +202,7 @@ export const TeamMemberDetail = () => {
                 {member.bio}
               </p>
 
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div className="profile-actions-wrapper">
                 <Link to="/contact" className="btn btn-cyan" style={{ padding: '0.65rem 1.5rem' }}>
                   <span>Get in Touch</span>
                   <ArrowRight size={16} />
