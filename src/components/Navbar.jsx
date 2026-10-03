@@ -69,6 +69,18 @@ export const Navbar = () => {
             About
           </Link>
           <Link
+            to="/team"
+            style={{
+              fontSize: '0.95rem',
+              fontWeight: 600,
+              color: location.pathname.startsWith('/team') ? '#00D8FF' : '#E2E8F0',
+              textDecoration: 'none',
+              transition: 'color 0.2s ease',
+            }}
+          >
+            Team
+          </Link>
+          <Link
             to="/blog"
             style={{
               fontSize: '0.95rem',
@@ -151,6 +163,13 @@ export const Navbar = () => {
             style={{ fontSize: '1.1rem', fontWeight: 600, color: '#FFFFFF', textDecoration: 'none' }}
           >
             About
+          </Link>
+          <Link
+            to="/team"
+            onClick={() => setMobileMenuOpen(false)}
+            style={{ fontSize: '1.1rem', fontWeight: 600, color: '#FFFFFF', textDecoration: 'none' }}
+          >
+            Team
           </Link>
           <Link
             to="/blog"

@@ -6,17 +6,20 @@ import { Link } from 'react-router-dom';
 import founderAtharshImg from '../assets/founder_atharsh.jpg';
 import founderAkashImg from '../assets/founder_akash.jpg';
 import founderAjayImg from '../assets/founder_ajay.jpg';
+import teamKishoreImg from '../assets/team_kishore.jpg';
 
 export const About = () => {
   const founders = [
     {
+      id: 'atharsh-s',
       name: 'Atharsh S',
-      role: 'Co-Founder',
+      role: 'Founder',
       focus: 'Product Strategy & Systems Engineering',
       bio: 'Technical visionary pushing the frontiers of systems engineering and high-availability design templates across our digital platforms.',
       image: founderAtharshImg
     },
     {
+      id: 'akash-p',
       name: 'Akash P',
       role: 'Co-Founder',
       focus: 'UI/UX Architecture & Product Operations',
@@ -24,11 +27,20 @@ export const About = () => {
       image: founderAkashImg
     },
     {
+      id: 'ajay-ks',
       name: 'Ajay KS',
       role: 'Co-Founder',
       focus: 'AI Architecture & Growth Integration',
       bio: 'A master of product-market integration and growth strategies, translating complex client business matrices into streamlined customer pathways.',
       image: founderAjayImg
+    },
+    {
+      id: 'kishore-d',
+      name: 'Kishore D',
+      role: 'Designing & Planning',
+      focus: 'UI/UX Design & Strategic Product Planning',
+      bio: 'Leads spatial design concepts, product wireframing, and strategic workflow planning across Mystrio digital products.',
+      image: teamKishoreImg
     },
   ];
 
@@ -151,43 +163,79 @@ export const About = () => {
             </p>
           </div>
 
-          <div className="grid-3" style={{ gap: '2rem' }}>
+          <div className="grid-4" style={{ gap: '2rem' }}>
             {founders.map((founder) => (
-              <div key={founder.name} className="card-light" style={{ padding: '2.5rem 2rem', textAlign: 'center' }}>
+              <Link
+                key={founder.id}
+                to={`/team/${founder.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-light"
+                style={{ 
+                  padding: '2.5rem 1.75rem', 
+                  textAlign: 'center',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  cursor: 'pointer'
+                }}
+              >
+                <div>
+                  <div 
+                    style={{ 
+                      width: '96px', 
+                      height: '96px', 
+                      borderRadius: '50%', 
+                      margin: '0 auto 1.5rem auto',
+                      overflow: 'hidden',
+                      border: '3px solid #00D8FF',
+                      boxShadow: '0 8px 20px rgba(0, 216, 255, 0.25)'
+                    }}
+                  >
+                    <img 
+                      src={founder.image} 
+                      alt={founder.name} 
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  </div>
+
+                  <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--text-dark)', marginBottom: '0.25rem' }}>
+                    {founder.name}
+                  </h3>
+
+                  <div style={{ color: '#00D8FF', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.05em', marginBottom: '0.75rem' }}>
+                    {founder.role.toUpperCase()}
+                  </div>
+
+                  <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-dark)', marginBottom: '0.75rem' }}>
+                    {founder.focus}
+                  </div>
+
+                  <p style={{ color: 'var(--text-muted-light)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+                    {founder.bio}
+                  </p>
+                </div>
+
                 <div 
                   style={{ 
-                    width: '96px', 
-                    height: '96px', 
-                    borderRadius: '50%', 
-                    margin: '0 auto 1.5rem auto',
-                    overflow: 'hidden',
-                    border: '3px solid #00D8FF',
-                    boxShadow: '0 8px 20px rgba(0, 216, 255, 0.25)'
+                    marginTop: 'auto',
+                    paddingTop: '1rem',
+                    borderTop: '1px solid rgba(0, 0, 0, 0.06)',
+                    color: '#00D8FF',
+                    fontWeight: 700,
+                    fontSize: '0.85rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.35rem'
                   }}
                 >
-                  <img 
-                    src={founder.image} 
-                    alt={founder.name} 
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
+                  <span>View Full Profile</span>
+                  <ArrowRight size={14} />
                 </div>
-
-                <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--text-dark)', marginBottom: '0.25rem' }}>
-                  {founder.name}
-                </h3>
-
-                <div style={{ color: '#00D8FF', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.05em', marginBottom: '0.75rem' }}>
-                  {founder.role.toUpperCase()}
-                </div>
-
-                <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-dark)', marginBottom: '0.75rem' }}>
-                  {founder.focus}
-                </div>
-
-                <p style={{ color: 'var(--text-muted-light)', fontSize: '0.9rem', lineHeight: 1.6 }}>
-                  {founder.bio}
-                </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

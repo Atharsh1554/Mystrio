@@ -167,7 +167,7 @@ export const ProductDetailView = ({ product }) => {
           <div className="card-dark" style={{ maxWidth: '800px', margin: '0 auto', padding: '3.5rem 2rem' }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '1rem' }}>Interested in {product.name}?</h2>
             <p style={{ color: 'var(--text-muted-dark)', fontSize: '1.05rem', marginBottom: '2rem' }}>
-              Connect with founders Atharsh S, Ajay KS, and Akash P for early previews, partnership discussions, or product feedback.
+              Connect with founders Atharsh S, Ajay KS, Akash P, and design lead Kishore D for early previews, partnership discussions, or product feedback.
             </p>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
               {product.liveUrl && (

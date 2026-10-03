@@ -25,6 +25,7 @@ import missionImg from '../assets/mission_team.jpg';
 import founderAtharshImg from '../assets/founder_atharsh.jpg';
 import founderAkashImg from '../assets/founder_akash.jpg';
 import founderAjayImg from '../assets/founder_ajay.jpg';
+import teamKishoreImg from '../assets/team_kishore.jpg';
 
 const HOME_JSON_LD = [
   {
@@ -40,6 +41,7 @@ const HOME_JSON_LD = [
       { '@type': 'Person', name: 'Atharsh S' },
       { '@type': 'Person', name: 'Akash P' },
       { '@type': 'Person', name: 'Ajay KS' },
+      { '@type': 'Person', name: 'Kishore D' },
     ],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -689,7 +691,7 @@ export const Home = () => {
           <div className="grid-3" style={{ textAlign: 'center', gap: '2.5rem' }}>
             {[
               { value: '4 Products', label: 'ACTIVE PLATFORMS' },
-              { value: '3 Founders', label: 'DRIVING INNOVATION' },
+              { value: '4 Leaders', label: 'DRIVING INNOVATION' },
               { value: '1 Vision', label: 'UNIFIED STANDARD' },
             ].map(({ value, label }) => (
               <div key={label}>
@@ -765,86 +767,129 @@ export const Home = () => {
             </p>
           </div>
 
-          <div className="grid-3" style={{ gap: '2rem' }}>
+          <div className="grid-4" style={{ gap: '2rem' }}>
             {[
               {
+                id: 'atharsh-s',
                 name: 'Atharsh S',
-                role: 'CO-FOUNDER',
+                role: 'FOUNDER',
                 bio: 'Technical visionary pushing the frontiers of systems engineering and high-availability design templates across our multiple digital platforms.',
                 img: founderAtharshImg,
               },
               {
+                id: 'akash-p',
                 name: 'Akash P',
                 role: 'CO-FOUNDER',
                 bio: 'Focuses on user-interface architectures and human-centric systems, ensuring beautiful spatial design registers exist in our ecosystem products.',
                 img: founderAkashImg,
               },
               {
+                id: 'ajay-ks',
                 name: 'Ajay KS',
                 role: 'CO-FOUNDER',
                 bio: 'A master of product-market integration and growth strategies, translating complex client business matrices into streamlined customer pathways.',
                 img: founderAjayImg,
               },
-            ].map(({ name, role, bio, img }) => (
-              <div
-                key={name}
+              {
+                id: 'kishore-d',
+                name: 'Kishore D',
+                role: 'DESIGNING & PLANNING',
+                bio: 'Leads spatial design concepts, product wireframing, and strategic workflow planning across Mystrio digital products.',
+                img: teamKishoreImg,
+              },
+            ].map(({ id, name, role, bio, img }) => (
+              <Link
+                key={id}
+                to={`/team/${id}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="card-light"
-                style={{ padding: '2.5rem 2rem', textAlign: 'center' }}
+                style={{
+                  padding: '2.5rem 1.75rem',
+                  textAlign: 'center',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  cursor: 'pointer'
+                }}
               >
-                <div
-                  style={{
-                    width: '120px',
-                    height: '120px',
-                    borderRadius: '50%',
-                    margin: '0 auto 1.5rem auto',
-                    overflow: 'hidden',
-                    border: '3px solid #00D8FF',
-                    boxShadow: '0 8px 24px rgba(0, 216, 255, 0.25)',
-                  }}
-                >
-                  <img
-                    src={img}
-                    alt={`${name}, ${role} of MYSTRIO`}
-                    loading="lazy"
-                    width="120"
-                    height="120"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
+                <div>
+                  <div
+                    style={{
+                      width: '120px',
+                      height: '120px',
+                      borderRadius: '50%',
+                      margin: '0 auto 1.5rem auto',
+                      overflow: 'hidden',
+                      border: '3px solid #00D8FF',
+                      boxShadow: '0 8px 24px rgba(0, 216, 255, 0.25)',
+                    }}
+                  >
+                    <img
+                      src={img}
+                      alt={`${name}, ${role} of MYSTRIO`}
+                      loading="lazy"
+                      width="120"
+                      height="120"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  </div>
+
+                  <h3
+                    style={{
+                      fontSize: '1.4rem',
+                      fontWeight: 800,
+                      color: 'var(--text-dark)',
+                      marginBottom: '0.25rem',
+                    }}
+                  >
+                    {name}
+                  </h3>
+
+                  <div
+                    style={{
+                      color: '#00D8FF',
+                      fontWeight: 800,
+                      fontSize: '0.8rem',
+                      letterSpacing: '0.08em',
+                      marginBottom: '1.15rem',
+                    }}
+                  >
+                    {role}
+                  </div>
+
+                  <p
+                    style={{
+                      color: 'var(--text-muted-light)',
+                      fontSize: '0.925rem',
+                      lineHeight: 1.6,
+                      marginBottom: '1.5rem',
+                    }}
+                  >
+                    {bio}
+                  </p>
                 </div>
 
-                <h3
-                  style={{
-                    fontSize: '1.4rem',
-                    fontWeight: 800,
-                    color: 'var(--text-dark)',
-                    marginBottom: '0.25rem',
-                  }}
-                >
-                  {name}
-                </h3>
-
-                <div
-                  style={{
+                <div 
+                  style={{ 
+                    marginTop: 'auto',
+                    paddingTop: '1rem',
+                    borderTop: '1px solid rgba(0, 0, 0, 0.06)',
                     color: '#00D8FF',
-                    fontWeight: 800,
-                    fontSize: '0.8rem',
-                    letterSpacing: '0.08em',
-                    marginBottom: '1.15rem',
+                    fontWeight: 700,
+                    fontSize: '0.85rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.35rem'
                   }}
                 >
-                  {role}
+                  <span>View Full Profile</span>
+                  <ArrowRight size={14} />
                 </div>
-
-                <p
-                  style={{
-                    color: 'var(--text-muted-light)',
-                    fontSize: '0.925rem',
-                    lineHeight: 1.6,
-                  }}
-                >
-                  {bio}
-                </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -12,6 +12,8 @@ import { ProductRemix } from './pages/ProductRemix';
 import { Careers } from './pages/Careers';
 import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
+import { Team } from './pages/Team';
+import { TeamMemberDetail } from './pages/TeamMemberDetail';
 import { IntroSplash } from './components/IntroSplash';
 
 // Scroll to top helper on route navigation
@@ -47,6 +49,8 @@ export function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/team/:id" element={<TeamMemberDetail />} />
           {/* Fallback route */}
           <Route path="*" element={<Home />} />
         </Routes>

@@ -109,7 +109,7 @@ export const Footer = () => {
             color: '#64748B'
           }}
         >
-          <p>© {new Date().getFullYear()} Mystrio. All rights reserved. Founded by Atharsh S, Ajay KS, and Akash P.</p>
+          <p>© {new Date().getFullYear()} Mystrio. All rights reserved. Built by Atharsh S, Ajay KS, Akash P, and Kishore D.</p>
           <p>Engineered with absolute simplicity</p>
         </div>
       </div>
