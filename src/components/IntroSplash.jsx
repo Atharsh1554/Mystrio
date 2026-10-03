@@ -66,11 +66,11 @@ export const IntroSplash = () => {
           animation: 'cinematicReveal 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         }}
       >
-        {/* 3D Logo Mark with Clean Ethereal Glow */}
+        {/* Clean Logo Mark */}
         <div
           style={{
-            width: '110px',
-            height: '110px',
+            width: '200px',
+            height: 'auto',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -81,43 +81,11 @@ export const IntroSplash = () => {
             alt="Mystrio Logo"
             style={{
               width: '100%',
-              height: '100%',
+              height: 'auto',
               objectFit: 'contain',
-              filter: 'drop-shadow(0 0 20px rgba(0, 216, 255, 0.5)) drop-shadow(0 0 40px rgba(236, 72, 153, 0.35))',
+              filter: 'drop-shadow(0 0 25px rgba(0, 216, 255, 0.45)) drop-shadow(0 0 45px rgba(236, 72, 153, 0.3))',
             }}
           />
-        </div>
-
-        {/* Minimalist Cinematic Typography */}
-        <div style={{ marginTop: '1.25rem', textAlign: 'center' }}>
-          <h1
-            style={{
-              fontSize: '1.85rem',
-              fontWeight: 800,
-              fontFamily: 'Space Grotesk, sans-serif',
-              letterSpacing: '0.28em',
-              textTransform: 'uppercase',
-              margin: 0,
-              color: '#FFFFFF',
-              textShadow: '0 0 25px rgba(0, 216, 255, 0.4)',
-              animation: 'letterSpacingExpand 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-            }}
-          >
-            MYSTRIO
-          </h1>
-          <p
-            style={{
-              fontSize: '0.72rem',
-              letterSpacing: '0.35em',
-              fontWeight: 600,
-              color: 'rgba(255, 255, 255, 0.45)',
-              textTransform: 'uppercase',
-              marginTop: '0.4rem',
-              marginRight: '-0.35em',
-            }}
-          >
-            TECHNOLOGY
-          </p>
         </div>
       </div>
     </div>
