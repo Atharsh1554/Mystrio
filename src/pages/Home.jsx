@@ -45,7 +45,7 @@ const HOME_JSON_LD = [
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'contact@mystrio.com',
+      email: 'mystriotechnologies@gmail.com',
       contactType: 'general',
     },
   },

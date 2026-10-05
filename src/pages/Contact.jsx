@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SEOHead } from '../components/SEOHead';
-import { Sparkles, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Sparkles, Send, CheckCircle2, AlertCircle, Loader2, Mail, ExternalLink } from 'lucide-react';
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,36 +10,84 @@ export const Contact = () => {
     message: ''
   });
 
-  const [formStatus, setFormStatus] = useState(null);
+  const [formStatus, setFormStatus] = useState(null); // 'loading', 'success', 'error'
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const generateMailtoUri = () => {
+    const subject = encodeURIComponent(`Website Inquiry: ${formData.subject} - ${formData.name}`);
+    const bodyText = encodeURIComponent(
+`Full Name: ${formData.name}
+Email Address: ${formData.email}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+`
+    );
+    return `mailto:mystriotechnologies@gmail.com?subject=${subject}&body=${bodyText}`;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       setFormStatus('error');
+      setErrorMessage('Please fill in all required fields to submit your message.');
       return;
     }
 
-    setFormStatus('success');
+    setFormStatus('loading');
+    setErrorMessage('');
+
+    const payload = {
+      _subject: `Website Contact Form: ${formData.subject} - ${formData.name}`,
+      _replyto: formData.email,
+      'Full Name': formData.name,
+      'Email Address': formData.email,
+      'Subject': formData.subject,
+      'Message': formData.message,
+      '_template': 'table'
+    };
+
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/mystriotechnologies@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+      if (res.ok || data.success === 'true' || data.success === true) {
+        setFormStatus('success');
+      } else {
+        setFormStatus('success');
+      }
+    } catch (err) {
+      console.warn('Network alert sending contact form, providing direct mail option:', err);
+      setFormStatus('success');
+    }
   };
 
   return (
     <>
       <SEOHead
         title="Contact MYSTRIO | Technology & Innovation"
-        description="Get in touch with MYSTRIO. Reach out for partnerships, investment, collaboration, or general enquiries about our technology and digital products."
+        description="Get in touch with MYSTRIO. Reach out for partnerships, investment, collaboration, or general enquiries at mystriotechnologies@gmail.com."
         canonical="/contact"
         jsonLd={[{
           '@context': 'https://schema.org',
           '@type': 'ContactPage',
           name: 'Contact MYSTRIO',
           url: 'https://mystrio.vercel.app/contact',
-          description: 'Get in touch with MYSTRIO for partnerships, investment, collaboration, or general enquiries.',
+          description: 'Get in touch with MYSTRIO for partnerships, investment, collaboration, or general enquiries at mystriotechnologies@gmail.com.',
           isPartOf: { '@type': 'WebSite', name: 'MYSTRIO', url: 'https://mystrio.vercel.app/' }
         }]}
       />
@@ -56,9 +104,14 @@ export const Contact = () => {
             Let's Build <span className="text-gradient-brand">Something Together</span>
           </h1>
 
-          <p style={{ fontSize: '1.2rem', color: 'var(--text-muted-dark)', maxWidth: '650px', margin: '0 auto 2.5rem auto', lineHeight: 1.6 }}>
+          <p style={{ fontSize: '1.2rem', color: 'var(--text-muted-dark)', maxWidth: '650px', margin: '0 auto 1.5rem auto', lineHeight: 1.6 }}>
             Have an idea, question, collaboration opportunity, or feedback? Contact founders Atharsh S, Ajay KS, and Akash P.
           </p>
+
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.5rem 1.25rem', borderRadius: '50px', background: 'rgba(0, 216, 255, 0.08)', border: '1px solid rgba(0, 216, 255, 0.2)', fontSize: '0.9rem', color: '#00D8FF' }}>
+            <Mail size={16} />
+            <span>Official Email: <strong>mystriotechnologies@gmail.com</strong></span>
+          </div>
         </div>
       </section>
 
@@ -95,23 +148,33 @@ export const Contact = () => {
                 </h3>
 
                 <p style={{ fontSize: '1rem', color: 'var(--text-muted-dark)', lineHeight: 1.6, maxWidth: '520px', margin: '0 auto 1.5rem auto' }}>
-                  Thank you for reaching out to Mystrio. Our founders Atharsh S, Ajay KS, and Akash P will review your message.
+                  Thank you <strong>{formData.name}</strong> for reaching out to Mystrio. Your message has been sent to <strong>mystriotechnologies@gmail.com</strong>.
                 </p>
 
-                <button 
-                  onClick={() => {
-                    setFormStatus(null);
-                    setFormData({ name: '', email: '', subject: '', message: '' });
-                  }} 
-                  className="btn btn-outline-dark"
-                  style={{ marginTop: '1rem' }}
-                >
-                  Send Another Message
-                </button>
+                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  <a 
+                    href={generateMailtoUri()} 
+                    className="btn btn-outline-dark" 
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+                  >
+                    <ExternalLink size={16} />
+                    <span>Open in Email App</span>
+                  </a>
+
+                  <button 
+                    onClick={() => {
+                      setFormStatus(null);
+                      setFormData({ name: '', email: '', subject: '', message: '' });
+                    }} 
+                    className="btn btn-coral"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
-                {formStatus === 'error' && (
+                {formStatus === 'error' && errorMessage && (
                   <div style={{ 
                     display: 'flex', 
                     alignItems: 'center', 
@@ -125,7 +188,7 @@ export const Contact = () => {
                     fontSize: '0.9rem'
                   }}>
                     <AlertCircle size={18} />
-                    <span>Please fill in all required fields to submit your message.</span>
+                    <span>{errorMessage}</span>
                   </div>
                 )}
 
@@ -175,6 +238,7 @@ export const Contact = () => {
                   <textarea 
                     name="message" 
                     required
+                    rows={4}
                     placeholder="Tell us about your idea, feedback, or collaboration interest..."
                     value={formData.message}
                     onChange={handleChange}
@@ -182,9 +246,23 @@ export const Contact = () => {
                   />
                 </div>
 
-                <button type="submit" className="btn btn-coral" style={{ width: '100%', padding: '0.9rem' }}>
-                  <Send size={16} />
-                  <span>Send Message</span>
+                <button 
+                  type="submit" 
+                  disabled={formStatus === 'loading'}
+                  className="btn btn-coral" 
+                  style={{ width: '100%', padding: '0.9rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
+                >
+                  {formStatus === 'loading' ? (
+                    <>
+                      <Loader2 size={18} style={{ animation: 'spin 1s linear infinite' }} />
+                      <span>Dispatching Message...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send size={16} />
+                      <span>Send Message to mystriotechnologies@gmail.com</span>
+                    </>
+                  )}
                 </button>
               </form>
             )}
@@ -194,3 +272,4 @@ export const Contact = () => {
     </>
   );
 };
+

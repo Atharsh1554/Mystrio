@@ -47,7 +47,7 @@ export const Footer = () => {
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF', transition: 'all 0.2s ease' }}>
                 <Share2 size={18} />
               </a>
-              <a href="mailto:contact@mystrio.com" style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF', transition: 'all 0.2s ease' }}>
+              <a href="mailto:mystriotechnologies@gmail.com" title="Email mystriotechnologies@gmail.com" style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF', transition: 'all 0.2s ease' }}>
                 <Mail size={18} />
               </a>
             </div>
